@@ -23,6 +23,8 @@ class ArticuloController extends Controller
     public function tablaarticulo(){
         $articulo = Articulo::all();
             return datatables()->of($articulo)
+            ->addColumn('btn', 'actions') 
+            ->rawColumns(['btn'])
             ->make(true);
     }    
 

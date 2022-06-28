@@ -62,6 +62,7 @@
     </table>
 @stop
 
+
 @section('css')
 <!-- Para iconos -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -77,6 +78,7 @@
     
     <script>
         let rutaTabla = "{{route('tablas.tablaarticulo')}}";
+            
         $(document).ready(function(){
             var table=$('#tablaarticulo').DataTable({
         "ajax": rutaTabla,
@@ -86,7 +88,7 @@
             {data:'descripcion'},  
             {data:'cantidad'},  
             {data:'precio'}, 
-            {'defaultContent': "<a href='' type='button' class='editar btn btn-primary' data-toggle='modal'><i class='fa fa-pencil-square-o'></i></a>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>"},  
+            {data: 'btn'},
         ],
     });
 });
